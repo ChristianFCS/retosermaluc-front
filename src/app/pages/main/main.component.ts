@@ -55,6 +55,8 @@ export class MainComponent {
         alert(res.payload.body);
       });
   }
-
+  descargarExcelProcesado(){
+    this.fileService.abrirArchivo().subscribe();
+  }
 
 }

@@ -3,6 +3,6 @@
         <input (change)="cargarArchivos($event)" style="display: none;" #fileInput type="file">
         <button type="button" class="btn btn-primary btn-lg" (click)="fileInput.click()">Adjuntar documento</button>
         <button type="button" (click)="procesarDataCargada()" class="btn btn-success btn-lg">Procesar Data Cargada</button>
-        <button type="button" class="btn btn-dark btn-lg">Descargar documento</button>
+        <button type="button" (click)="descargarExcelProcesado()"class="btn btn-dark btn-lg">Descargar documento</button>
     </div>
 </div>
