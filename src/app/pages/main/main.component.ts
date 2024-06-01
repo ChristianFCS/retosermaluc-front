@@ -10,7 +10,9 @@ import { FileService } from '../../services/file/file.service';
 export class MainComponent {
   @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>
 
-
+  public flag_cargarArchivos = false;
+  public flag_procesarDataCargada = false;
+  public flag_descargarExcelProcesado = false;
 
   constructor(
 
@@ -23,10 +25,13 @@ export class MainComponent {
   }
 
   cargarArchivos(files: any) {
+    
     console.log(files);
     if (files) {
       const filesArray = Array.from(files.target.files) as File[];
+      this.flag_cargarArchivos=true;
       this.fileService.cargarArchivo(filesArray[0]).subscribe((res) =>{
+        this.flag_cargarArchivos=false;
         if(!res.estado){
           alert(res.mensaje);
           return;
@@ -35,15 +40,16 @@ export class MainComponent {
           alert(res.payload.mensaje);
           return;
         } 
-        alert(res.payload.body);
-        
+        alert(res.payload.body);        
       });
     }
 
   }
 
   procesarDataCargada() {
+    this.flag_procesarDataCargada=true;
       this.fileService.procesarDataCargada().subscribe((res) =>{
+        this.flag_procesarDataCargada=false;
         if(!res.estado){
           alert(res.mensaje);
           return;
@@ -56,7 +62,8 @@ export class MainComponent {
       });
   }
   descargarExcelProcesado(){
-    this.fileService.abrirArchivo().subscribe();
+    this.flag_descargarExcelProcesado=true;
+    this.fileService.abrirArchivo().subscribe((res) =>{this.flag_descargarExcelProcesado=false;});
   }
 
 }
