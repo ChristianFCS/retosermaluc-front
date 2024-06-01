@@ -1,7 +1,7 @@
 <div class="contenedor">
     <div class="controles">
-     
-        <button type="button" class="btn btn-primary btn-lg">Adjuntar documento</button>
+        <input (change)="cargarArchivos($event)" style="display: none;" #fileInput type="file">
+        <button type="button" class="btn btn-primary btn-lg" (click)="fileInput.click()">Adjuntar documento</button>
         <button type="button" (click)="verResultados()" class="btn btn-success btn-lg">Ver resultados</button>
         <button type="button" class="btn btn-dark btn-lg">Descargar documento</button>
     </div>
