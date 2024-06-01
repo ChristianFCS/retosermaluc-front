@@ -1,6 +1,6 @@
-# Proyecto Angular 17 con Node 18
+# Proyecto Reto Sermaluc Frontend
 
-Este proyecto es una aplicación desarrollada con Angular 17 y Node.js 18.
+Este proyecto es una aplicación desarrollada como parte de la entrevista de trabajo de Sermaluc.
 
 ## Requisitos Previos
 
