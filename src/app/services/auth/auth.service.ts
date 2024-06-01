@@ -15,10 +15,7 @@ export class AuthService {
     private http: Http,
     private util: UtilService,
   ) { }
-  login(username: string, password: string) {
-    return this.http.postQuery<ResponseApi<any>>(LOGIN, {
-      username,
-      password,
-    });
+  login(body:any) {
+    return this.http.postQuery<ResponseApi<{token: string}>>(LOGIN, body);
   }
 }
