@@ -8,7 +8,7 @@ import { UtilService } from '../util/util.service';
   providedIn: 'root'
 })
 export class Http {
-  URL_SERVICIO = '';
+  URL_SERVICIO = 'http://localhost:8080';
 
   constructor(public http: HttpClient,
     private util: UtilService,
