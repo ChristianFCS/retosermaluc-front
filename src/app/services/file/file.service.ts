@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http } from '../http/http.service';
 import { ResponseApi } from '../../interfaces/response.interface';
-import { CARGAR_EXCEL } from '../../config/endpoints';
+import { CARGAR_EXCEL, PROCESAR_DATA_CARGADA } from '../../config/endpoints';
 
 @Injectable({
   providedIn: 'root'
@@ -23,5 +23,9 @@ export class FileService {
 
   cargarArchivo(file: File,) {
     return this.http.postQuery<ResponseApi<string>>(CARGAR_EXCEL, this.builFormData(file));
+  }
+
+  procesarDataCargada(){
+    return this.http.postQuery<ResponseApi<string>>(PROCESAR_DATA_CARGADA,null );
   }
 }
