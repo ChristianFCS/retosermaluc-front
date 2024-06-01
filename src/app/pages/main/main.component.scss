@@ -1,0 +1,12 @@
+.controles {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
