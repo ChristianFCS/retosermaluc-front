@@ -22,13 +22,6 @@ export class MainComponent {
 
   }
 
-
-  verResultados() {
-
-    this.router.navigate(['/resultado'])
-
-  }
-
   cargarArchivos(files: any) {
     console.log(files);
     if (files) {
@@ -47,6 +40,20 @@ export class MainComponent {
       });
     }
 
+  }
+
+  procesarDataCargada() {
+      this.fileService.procesarDataCargada().subscribe((res) =>{
+        if(!res.estado){
+          alert(res.mensaje);
+          return;
+        } 
+        if(!res.payload.estado){
+          alert(res.payload.mensaje);
+          return;
+        } 
+        alert(res.payload.body);
+      });
   }
 
 
