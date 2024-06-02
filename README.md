@@ -61,6 +61,10 @@ En el archivo `package.json`, puedes encontrar varios scripts útiles:
 - `ng test`: Ejecuta los tests unitarios.
 - `ng lint`: Ejecuta el linter para encontrar y arreglar problemas en el código.
 
+## Credenciales de prueba
+- username: usuario_admin
+- password: 123456
+
 ## Contacto
 
 Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue o contactarme a través de mi correo electrónico [ccondoris1@gmail.com](mailto:ccondoris1@gmail.com).
