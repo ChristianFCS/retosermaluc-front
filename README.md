@@ -66,7 +66,8 @@ En el archivo `package.json`, puedes encontrar varios scripts útiles:
 - password: 123456
   
 ## Consideración adicional
-Recordar que para descargar datos del excel, primero se debe haber cargado el documento y posteriormente haberle dado click al botón de Procesar Data.
+-Recordar que para descargar datos del excel, primero se debe haber cargado el documento y posteriormente haberle dado click al botón de Procesar Data.
+-El Reporte de Excel generado contiene 3 columnas extra donde se logra ver el resultado de la fórmula, un mensaje correspondiente al procesamiento(para visualizar en caso de error) y la fecha/hora de su procesamiento(UTC-0).
 
 ## Contacto
 
