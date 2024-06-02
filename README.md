@@ -1,27 +1,66 @@
-# App
+# Proyecto Reto Sermaluc Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.5.
+Este proyecto es una aplicación desarrollada como parte de la entrevista de trabajo de Sermaluc.
 
-## Development server
+## Requisitos Previos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Antes de comenzar, asegúrate de tener instalado lo siguiente:
 
-## Code scaffolding
+- [Node.js](https://nodejs.org/) (versión 18)
+- [Angular CLI](https://angular.io/cli) (versión 17)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Puedes verificar las versiones instaladas usando los siguientes comandos:
 
-## Build
+```bash
+node -v
+ng version
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Instalación
 
-## Running unit tests
+Sigue estos pasos para configurar y levantar el proyecto:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### 1. Clonar el Repositorio
 
-## Running end-to-end tests
+Clona el repositorio en tu máquina local:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+git clone https://github.com/ChristianFCS/retosermaluc-front.git
+cd tu-proyecto
+```
 
-## Further help
+### 2. Instalar Dependencias
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Instala las dependencias necesarias para el proyecto:
+
+```bash
+npm install
+```
+
+### 3. Configuración del Ambiente
+
+Configura la url del backend que atenderá al proyecto en la linea 11 del archivo `\app\services\http\http.service.ts`
+`URL_SERVICIO = 'http://localhost:8080'`;
+
+### 4. Levantar el Servidor de Desarrollo
+
+Levanta el servidor de desarrollo para ver la aplicación en tu navegador:
+
+```bash
+ng serve
+```
+
+Por defecto, la aplicación estará disponible en `http://localhost:4200/`.
+
+## Scripts Disponibles
+
+En el archivo `package.json`, puedes encontrar varios scripts útiles:
+
+- `ng serve`: Levanta el servidor de desarrollo.
+- `ng build`: Construye la aplicación para producción.
+- `ng test`: Ejecuta los tests unitarios.
+- `ng lint`: Ejecuta el linter para encontrar y arreglar problemas en el código.
+
+## Contacto
+
+Si tienes alguna pregunta o sugerencia, no dudes en abrir un issue o contactarme a través de mi correo electrónico [ccondoris1@gmail.com](mailto:ccondoris1@gmail.com).

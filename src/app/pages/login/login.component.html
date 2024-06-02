@@ -1,0 +1,21 @@
+<div class="contenedor">
+
+    <div class="login-form">
+        <h2 class="text-center">Iniciar Sesión</h2>
+        <form [formGroup]="formulario" class="form">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input formControlName="username" class="form-control" id="username"
+                    placeholder="Ingrese su username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input formControlName="password" type="password" class="form-control" id="password"
+                    placeholder="Ingrese su contraseña" required>
+            </div>
+            <button (click)="iniciarSesion()" [disabled]="formulario.invalid" type="submit" class="btn btn-primary btn-block">Iniciar
+                Sesión</button>
+        </form>
+    </div>
+
+</div>

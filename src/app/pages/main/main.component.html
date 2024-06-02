@@ -1,0 +1,8 @@
+<div class="contenedor">
+    <div class="controles">
+        <input (change)="cargarArchivos($event)" style="display: none;" #fileInput type="file">
+        <button type="button" class="btn btn-primary btn-lg" (click)="fileInput.click()" [disabled]="flag_cargarArchivos" >{{flag_cargarArchivos?"Adjuntando documento ...":"Adjuntar documento"}}</button>
+        <button type="button" (click)="procesarDataCargada()" class="btn btn-success btn-lg" [disabled]="flag_procesarDataCargada">{{flag_procesarDataCargada?"Procesando Data Cargada ...":"Procesar Data Cargada"}}</button>
+        <button type="button" (click)="descargarExcelProcesado()"class="btn btn-dark btn-lg" [disabled]="flag_descargarExcelProcesado">{{flag_descargarExcelProcesado?"Descargando documento ...":"Descargar documento"}}</button>
+    </div>
+</div>
