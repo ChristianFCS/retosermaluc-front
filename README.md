@@ -64,6 +64,9 @@ En el archivo `package.json`, puedes encontrar varios scripts útiles:
 ## Credenciales de prueba
 - username: usuario_admin
 - password: 123456
+  
+## Consideración adicional
+Recordar que para descargar datos del excel, primero se debe haber cargado el documento y posteriormente haberle dado click al botón de Procesar Data.
 
 ## Contacto
 
